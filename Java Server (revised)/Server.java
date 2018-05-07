@@ -20,7 +20,7 @@ class Hman_Imp extends Hangman_InterfacePOA{
 	private ORB orb;
 	private Map<String, List> users = new Hashtable<>();
 	private List<String> words = new ArrayList<>();
-	private List<String> usedWords;
+	private ArrayList<String> usedWords;
 
 	private int pickWord;
 	private String genWord;
@@ -35,6 +35,7 @@ class Hman_Imp extends Hangman_InterfacePOA{
 		}catch(Exception e){
 		}
 	}
+	
 	public void setORB(ORB orb){
 		this.orb = orb;
 	}
@@ -44,15 +45,18 @@ class Hman_Imp extends Hangman_InterfacePOA{
 			return false;
 		} else {
 			users.put(username, usedWords = new ArrayList<>());
+			System.out.println("New User: " + username);
 			return true;
 		}
 	}
 	
 	public String wordToGuess(String username){
-		pickWord = new Random().nextInt(words.size());
-		genWord = words.get(pickWord);
 		
-		(users.get(username)).add(genWord);
+		while(!(users.get(username)).contains(genWord)){
+			pickWord = new Random().nextInt(words.size());
+			genWord = words.get(pickWord);
+			(users.get(username)).add(genWord);
+		}
 		return genWord;
 	}
 	
