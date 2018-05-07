@@ -1,9 +1,0 @@
-module Hangman_Game
-{
-	interface Hangman_Interface
-	{
-		void getUserName(in string name);
-		boolean guess(in string guess);
-		void continue(in string confirm);
-	};
-};

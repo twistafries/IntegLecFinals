@@ -4,9 +4,7 @@ module Hangman_Game
 	{
 		boolean login(in string username);
 		string wordToGuess(in string username);
-		boolean guessTheLetter(in string username, in string letter);
-		string getLife(in string username);
-		boolean gameOver(in string username);
+		boolean guessTheLetter(in string letter);
 		void logout(in string username);
 	};
 };
