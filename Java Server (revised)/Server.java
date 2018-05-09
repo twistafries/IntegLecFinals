@@ -23,7 +23,6 @@ class Hman_Imp extends Hangman_InterfacePOA{
 	private ArrayList<String> usedWords;
 
 	private int pickWord;
-	private String genWord;
 	
 	public Hman_Imp(){
 		try{
@@ -51,17 +50,13 @@ class Hman_Imp extends Hangman_InterfacePOA{
 	}
 	
 	public String wordToGuess(String username){
-		
+		String genWord = "";
 		while(!(users.get(username)).contains(genWord)){
 			pickWord = new Random().nextInt(words.size());
 			genWord = words.get(pickWord);
 			(users.get(username)).add(genWord);
 		}
 		return genWord;
-	}
-	
-	public boolean guessTheLetter(String letter){
-		return true;
 	}
 	
 	public void logout(String username){
