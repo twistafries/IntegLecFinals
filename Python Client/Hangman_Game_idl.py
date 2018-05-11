@@ -43,7 +43,6 @@ omniORB.registerType(Hangman_Interface._NP_RepositoryId, _0_Hangman_Game._d_Hang
 # Hangman_Interface operations and attributes
 Hangman_Interface._d_login = (((omniORB.tcInternal.tv_string,0), ), (omniORB.tcInternal.tv_boolean, ), None)
 Hangman_Interface._d_wordToGuess = (((omniORB.tcInternal.tv_string,0), ), ((omniORB.tcInternal.tv_string,0), ), None)
-Hangman_Interface._d_guessTheLetter = (((omniORB.tcInternal.tv_string,0), ), (omniORB.tcInternal.tv_boolean, ), None)
 Hangman_Interface._d_logout = (((omniORB.tcInternal.tv_string,0), ), (), None)
 
 # Hangman_Interface object reference
@@ -59,9 +58,6 @@ class _objref_Hangman_Interface (CORBA.Object):
     def wordToGuess(self, *args):
         return self._obj.invoke("wordToGuess", _0_Hangman_Game.Hangman_Interface._d_wordToGuess, args)
 
-    def guessTheLetter(self, *args):
-        return self._obj.invoke("guessTheLetter", _0_Hangman_Game.Hangman_Interface._d_guessTheLetter, args)
-
     def logout(self, *args):
         return self._obj.invoke("logout", _0_Hangman_Game.Hangman_Interface._d_logout, args)
 
@@ -75,7 +71,7 @@ class Hangman_Interface (PortableServer.Servant):
     _NP_RepositoryId = _0_Hangman_Game.Hangman_Interface._NP_RepositoryId
 
 
-    _omni_op_d = {"login": _0_Hangman_Game.Hangman_Interface._d_login, "wordToGuess": _0_Hangman_Game.Hangman_Interface._d_wordToGuess, "guessTheLetter": _0_Hangman_Game.Hangman_Interface._d_guessTheLetter, "logout": _0_Hangman_Game.Hangman_Interface._d_logout}
+    _omni_op_d = {"login": _0_Hangman_Game.Hangman_Interface._d_login, "wordToGuess": _0_Hangman_Game.Hangman_Interface._d_wordToGuess, "logout": _0_Hangman_Game.Hangman_Interface._d_logout}
 
 Hangman_Interface._omni_skeleton = Hangman_Interface
 _0_Hangman_Game__POA.Hangman_Interface = Hangman_Interface

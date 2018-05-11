@@ -21,8 +21,9 @@ public class Client{
 			org.omg.CORBA.Object objRef = orb.resolve_initial_references("NameService");
 			NamingContextExt ncRef = NamingContextExtHelper.narrow(objRef);
 			String name = "Hangman";
-			
-			hImp = Hangman_InterfaceHelper.narrow(ncRef.resolve_str(name));
+			NameComponent nc = new NameComponent(name, "");
+			NameComponent path[] = {nc};
+			Hangman_Interface hImp = Hangman_InterfaceHelper.narrow(ncRef.resolve(path));
 			System.out.println("Welcome to the Java Hangman Game client.");
 			while(loop==false){
 				System.out.println("Enter your name: ");

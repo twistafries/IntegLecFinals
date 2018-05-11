@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package hangman;
 
 import javafx.animation.RotateTransition;
@@ -15,10 +11,6 @@ import javafx.scene.text.Text;
 import javafx.scene.transform.Rotate;
 import javafx.util.Duration;
 
-/**
- *
- * @author asus
- */
 public class Letter extends StackPane {
     private static final Font TEXT_FONT = new Font("System", 24);
     private Rectangle textBox = new Rectangle(40, 50);

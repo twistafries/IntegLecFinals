@@ -72,20 +72,23 @@ public class Server{
 		try{
 			ORB orb = ORB.init(args, null);
 			
+			//set up server skeleton
 			POA rootpoa = POAHelper.narrow(orb.resolve_initial_references("RootPOA"));
 			rootpoa.the_POAManager().activate();
 			
+			//servant ref
 			Hman_Imp hman_Imp = new Hman_Imp();
 			hman_Imp.setORB(orb);
 			
 			org.omg.CORBA.Object ref = rootpoa.servant_to_reference(hman_Imp);
 			Hangman_Interface href = Hangman_InterfaceHelper.narrow(ref);
 			
+			//naming service
 			org.omg.CORBA.Object objRef = orb.resolve_initial_references("NameService");
 			NamingContextExt ncRef = NamingContextExtHelper.narrow(objRef);
-			
-			String name = "Hangman";
-			NameComponent path[] = ncRef.to_name(name);
+			String name_service = "hangman";
+			NameComponent nc = new NameComponent(name_service, "");
+			NameComponent path[] = {nc};
 			ncRef.rebind(path, href);
 			
 			System.out.println("Server up. Would you like to play a game?");
