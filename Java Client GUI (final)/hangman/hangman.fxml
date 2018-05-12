@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" onKeyPressed="#keyboardPress" prefHeight="650.0" prefWidth="1300.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hangman.HangmanController">
+    <stylesheets>
+        <URL value="@hangman.css" />
+    </stylesheets>
+   <children>
+      <HBox fx:id="guessHBox" alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <padding>
+            <Insets left="30.0" right="30.0" top="30.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="40.0" layoutY="100.0" prefHeight="300.0" prefWidth="748.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="40.0">
+         <children>
+            <VBox prefHeight="230.0" prefWidth="750.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0">
+                     <children>
+                        <Button fx:id="qButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="Q">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="wButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="W">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="eButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="E">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="rButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="R">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="tButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="T">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="yButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="Y">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="uButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="U">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="iButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="I">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="oButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="O">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="pButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="P">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="681.0" spacing="8.0">
+                     <children>
+                        <Button fx:id="aButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="A">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="sButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="S">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="dButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="D">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="fButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="F">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="gButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="G">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="hButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="H">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="jButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="J">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="kButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="K">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="lButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="L">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0">
+                     <children>
+                        <Button fx:id="zButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="Z">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="X" fx:id="xButton">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="cButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="C">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="vButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="V">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="bButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="B">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="nButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="N">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="mButton" mnemonicParsing="false" onMouseClicked="#keyboardButtons" prefHeight="45.0" prefWidth="45.0" text="M">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <StackPane layoutX="861.0" layoutY="302.0" prefHeight="443.0" prefWidth="421.0" AnchorPane.bottomAnchor="100.0" AnchorPane.rightAnchor="120.0">
+         <children>
+            <ImageView fx:id="hangmanImageView" fitHeight="443.0" fitWidth="421.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+               <image>
+                  <Image url="@images/Life5.png" />
+               </image></ImageView>
+         </children>
+      </StackPane>
+      <Label fx:id="gameOverLabel" layoutX="877.0" layoutY="542.0" text="GAME OVER">
+         <font>
+            <Font name="Chiller" size="48.0" />
+         </font>
+      </Label>
+      <Button fx:id="playAgainButton" layoutX="581.0" layoutY="350.0" mnemonicParsing="false" onAction="#playAgain" text="PLAY AGAIN" AnchorPane.bottomAnchor="30.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Label fx:id="usernameLabel" alignment="CENTER" layoutX="164.0" layoutY="122.0" prefHeight="102.0" prefWidth="500.0" text="iJohnCarlo">
+         <font>
+            <Font name="Copperplate Gothic Light" size="72.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
